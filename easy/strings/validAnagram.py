@@ -1,0 +1,16 @@
+class Solution:
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(s) != len(t):
+            return False
+        
+        slist = list(s)
+        for c in t:
+            if c in slist:
+                slist.remove(c)
+
+        return (not slist)
